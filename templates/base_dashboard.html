@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" type="text/css" href="/static/iconos/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+
+</head>
+<body>
+<ul>
+    <li ><a href="{{url_for('dashboard')}}"><i class="fa fa-home"></i>   Dashboard</a></li>
+    <li><a href="{{url_for('almacen')}}"><i class="fa fa-book"></i>    Almacen</a></li>
+    <li><a href="{{url_for('reg_entrada')}}"><i class="fa fa-pencil"></i>   Reportar Entrada</a></li>
+    <li><a href="{{url_for('reg_salida')}}"><i class="fa fa-pencil"></i>   Reportar Salida</a></li>
+    <li style="float:right"><a class="active" href="{{url_for('logout')}}"><i class="fa fa-sign-out"></i>   Log out</a></li>
+    <li style="float:right"><a class="active" href="{{url_for('registrar')}}"><i class="fa fa-pencil-square"></i>  Registrar Usuario</a></li>
+    
+  </ul>
+<div class="contenido"> 
+    {% block contenido %}
+
+    {% endblock %}
+</div>
+
+</body>
+</html>

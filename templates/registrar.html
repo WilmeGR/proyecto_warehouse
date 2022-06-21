@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_signup_in.css') }}">
+</head>
+
+<body>
+  <div class=" fadeInDown">
+<form action="{{url_for('user_done')}}" method="post" style="border:1px solid #ccc">  
+    <div class="formato">
+      <h1 class="fadeIn first">Registrarte</h1>
+      <p class="fadeIn first">Por favor, completa todos los datos solicitados.</p>
+      <hr>
+      
+      <input type="text" class="fadeIn second input_ingresar" placeholder="Usuario" name="usuario_txt" required minlength="4">
+
+      
+      <input type="text" class="fadeIn second input_ingresar" placeholder="Nombre" name="nombre_txt" required>
+      <input type="text" placeholder="Apellido" name="apellido_txt" required class="fadeIn third input_ingresar">
+  
+      <input type="text" class="fadeIn third input_ingresar" placeholder="Correo" name="correo_txt" required>
+  
+      <input type="password" class="fadeIn third input_ingresar" placeholder="Contraseña" name="clave_txt" required minlength="6">
+  
+      <p class="fadeIn fourth">Al crear esta cuenta acepta nuestros terminos y condiciones <a href="#" style="color:dodgerblue">Terminos & condiciones</a>.</p>
+  
+      <div class="clearfix">
+        <a href="{{url_for('dashboard')}}"><button type="button" class="btn_cancelar fadeIn fourth">cancelar</button></a>
+        <button type="submit" class="btn_aceptar fadeIn fourth">Registrarte</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_signup_in.css') }}">
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <h2 class="active"> Ingresar </h2>
+
+          <div class="fadeIn first">
+            <img src="/static/imagen/usuario1.png" id="icon" alt="User Icon" />
+          </div>
+          <form action="{{url_for('user_login')}}"  method="post">
+            
+            <input type="text" id="login" class="fadeIn second input_login" name="username" placeholder="USUARIO">
+            <input type="password" id="password" class="fadeIn third input_login" name="password" placeholder="CONTRASEÑA">
+            <input type="submit" class="fadeIn fourth" value="INGRESAR" >
+          </form>
+       
+          <div id="formFooter">
+            <a class="underlineHover" href="#">Olvidaste tu contraseña?</a>
+          </div>
+      
+        </div>
+      </div>
+</body>
+</html>

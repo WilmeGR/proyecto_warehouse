@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "dashboard.html" %}
+{% block contenido %}
+<html>
+    <head>
+
+        <title> Almacen </title>
+
+    </head>
+<body>
+    <div class="formato">
+    <h1 class="texto_almacen">Consulta Almacen</h1>
+    <form method="post">
+        <input type="text" name="text_buscar" class="buscar_txt" placeholder= "Escribe el producto">
+        <button type="submit" class="btn_buscar" name="btn_buscar">BUSCAR</button>
+    </form>
+    <table class="tabla_almacen">
+        <tr>
+            <th>Codigo</th>
+            <th>Producto</th>
+            <th>Area</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Cantidad</th>
+        </tr>
+        {% for row in pro_almacenes %}
+        <tr>
+            <td>{{row ["codigo_pro"] }}</td>
+            <td>{{row ["nombre_pro"] }}</td>
+            <td>{{row ["area_pro"] }}</td>
+            <td>{{row ["precio_pro"] }}</td>
+            <td>{{row ["cantidad_pro"] }}</td>
+        
+            <td><input type="submit"  value="Delete" class="btn_delete_almacen"> <a href="/editar_producto/{{row ['codigo_pro']}}"> <input type="submit" value="Editar" class="btn_update_almacen"></a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+</body>
+</html>
+{% endblock %}

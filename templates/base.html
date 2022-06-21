@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" type="text/css" href="/static/iconos/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+
+</head>
+<body>
+<ul>
+    <li><a href="{{url_for('index')}}"><i class="fa fa-home"></i>   Inicio</a></li>
+    <li><a href="{{url_for('login')}}"><i class="fa fa-user-o"></i>   Ingresar</a></li>
+    <li><a href="#"><i class="fa fa-pencil"></i>   Estamos trabajando</a></li>
+    <li style="float:right"><a class="active" href="{{url_for('contactos')}}"><i class="fa fa-envelope"></i>   About</a></li>
+</ul>
+<div class="contenido"> 
+    {% block contenido %}
+
+    {% endblock %}
+</div>
+
+</body>
+</html>

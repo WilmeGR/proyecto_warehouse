@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+<h1>Editar Producto</h1>
+<form method="post">
+<table class="tabla_editar_producto">
+    <tr>
+        <th>Codigo</th>
+        <td><input type="text" name="codigo_pro" class="input_editar_producto" value="{{pro_almacenes['codigo_pro'] }}"></td>
+    </tr>
+    <tr>
+        <th>Producto</th>
+        <td><input type="text" name="nombre_pro" class="input_editar_producto" value="{{pro_almacenes['nombre_pro'] }}"></td>
+    </tr>
+    <tr>
+        <th>Area</th>
+        <td><input type="text" name="area_pro" class="input_editar_producto" value="{{pro_almacenes['area_pro'] }}"></td>
+    </tr>
+    <tr>
+        <th>Precio</th>
+        <td><input type="text" name="precio_pro" class="input_editar_producto" value="{{pro_almacenes['precio_pro'] }}"></td>
+    </tr>
+    <tr>
+        <th>Cantidad</th>
+        <td><input type="text" name="cantidad_pro" class="input_editar_producto" value="{{pro_almacenes['cantidad_pro'] }}"></td>
+    </tr>
+    
+</table>
+</form>
+<h1></h1>
+<input type="submit" class="input_guardar_pro" value="Guardar">
