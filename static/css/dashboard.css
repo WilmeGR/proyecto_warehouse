@@ -25,7 +25,7 @@
   .opciones{
     font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 25%;
+  width: 15%;
   columns: 100px;
   text-align: center;
   padding: 1px;
@@ -35,7 +35,7 @@
     border: 1px solid #ddd;
     padding: 8px;
   }
-  
+
   .tabla_almacen tr:nth-child(even){background-color: #f2f2f2;}
   
   .tabla_almacen tr:hover {background-color: #ddd;}
@@ -80,6 +80,14 @@
   .input_editar_producto {
     float:right;
     width: 50%;
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .input_editar_usuario {
+    float:right;
+    width: 100%;
     padding: 15px 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -214,13 +222,26 @@ border-radius: 4px;
   width: 10%;
 
 }
+.btn_añadir_pro{
+  border-radius: 4px;
+    
+    padding: 12px 12px;
+    color: white;
+    background-color: #2c65ce;
+    border: none;
+    position: fixed;
+    width: 10%;
+    bottom: 71.8%;
+    right: 40%;
+  
+  }
 .buscar_txt{
     border-radius: 4px;
     width: 40%;
     padding: 12px 12px;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 38%;
     margin-bottom: 10px;
     }
 
@@ -245,3 +266,48 @@ border-radius: 4px;
     float:right;
     }
 
+/*Agregar al dashboard.css*/
+
+    .formRegistro {
+          font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+           background-color: #ccc;
+           background-size: 50%;
+           margin: auto;
+           margin-top: auto;
+           text-align: center;
+           padding: 60px;
+           border-radius: 12px;
+           align-items: center;
+           width: 55%;
+          } 
+    
+          .btnAgregar {
+            margin: left;
+            border-radius: 4px;
+            padding: 12px 12px;
+            color: white;
+            font-style:normal;
+            background-color: #2c65ce;
+            align-content: left;
+            border: none;
+            margin-left: left;
+            margin-right: auto;
+            width: 20%;
+            margin-top: 30px;
+            
+            }
+    
+            .btn_cancelar {
+              margin: left;
+              border-radius: 4px;
+              padding: 12px 12px;
+              color: white;
+              font-style:normal;
+              background-color: #667582;
+              align-content: left;
+              border: none;
+              margin-left: left;
+              margin-right: auto;
+              width: 20%;
+              
+              }
