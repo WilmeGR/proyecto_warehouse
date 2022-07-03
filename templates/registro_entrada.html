@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 {% extends "base_dashboard.html" %}
 {% block contenido %}
-<div style="text-align: center">
-</div>
+<html>
+    <head>
+
+        <title>Registro de entrada</title>
+
+    </head>
+<body>
+    <h1 class="texto_almacen">REGISTRO ENTRADA</h1>
+    <form method ="post">
+    <section class="formRegistro">
+        
+            <div> <select  method="get">
+
+            
+        
+       
+        <div>
+            <input class="controls" type ="text" style="width: 250px;" name="id" id="id" placeholder="ID">
+            <input class="controls" type ="text" style="width: 250px;" name="codigo" id="codigo" placeholder="CODIGO">
+        </div>
+        <p></p>
+        <div><input class="controls" type ="text" style="width: 504px; "name="nombre" id="nombre" placeholder="NOMBRE"></div>
+        <p></p>
+        <div><input class="controls" type ="text" style="width: 504px;"name="area" id="area" placeholder="AREA"></div>
+        <p></p>
+        <div><input class="controls" type ="text" style="width: 250px;"name="precio" id="precio" placeholder="PRECIO">
+        <input class="controls" type ="text" style="width: 250px;"name="cantidad" id="cantidad" placeholder="CANTIDAD"></div>
+        <div>
+        
+        <section class="btnsRegistro">
+        <p></p>
+        <button type="submit" class="btnAgregar" >Agregar</button></a>
+        <button type="button" class="btn_cancelar">Deshacer</button>
+        <label type="text"name="msg"></label>
+        </section>
+        </div>
+    </section>
+</form>
+</body>    
+
 {% endblock %}

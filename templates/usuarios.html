@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "dashboard.html" %}
+{% block contenido %}
+<html>
+    <head>
+
+        <title> Usuarios</title>
+
+    </head>
+<body>
+    <div class="formato">
+    <h1 class="texto_almacen">Consulta Usuarios</h1>
+    <form method="post" action="/ver_user">
+        <input type="text" name="text_buscar" class="buscar_txt" placeholder= "Escribe el producto">
+        <button type="submit" class="btn_buscar" name="btn_buscar">BUSCAR</button> 
+    </form>
+   <table class="tabla_almacen">
+        <tr>
+            <th>Usuario</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Contraseña</th>
+            <th>Correo</th>
+            <th class="prueba">Opciones</th>
+        </tr>
+        {% for usuario in usuario %}
+        <tr>
+            <td> {{usuario.1}}</td>
+            <td>{{usuario.2 }}</td>
+            <td>{{usuario.3}}</td>
+            <td >{{usuario.4}}</td>
+            <td >{{usuario.5}}</td>
+            <td><a href="/delete_user/{{usuario.0}}"><input type="submit"  value="Delete" class="btn_delete_almacen"></a>  <a href="/editar_usuario/{{usuario.0}}"> <input type="submit" value="Editar" class="btn_update_almacen"></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+</body>
+</html>
+{% endblock %}

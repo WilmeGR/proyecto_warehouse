@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 <h1>Editar Producto</h1>
-<form method="post">
+<form method="post" action="/update_pro/{{almacenes.0}}">
 <table class="tabla_editar_producto">
     <tr>
         <th>Codigo</th>
-        <td><input type="text" name="codigo_pro" class="input_editar_producto" value="{{pro_almacenes['codigo_pro'] }}"></td>
+        <td><input type="text" name="codigo_pro" class="input_editar_producto" value="{{almacenes.1}}"></td>
     </tr>
     <tr>
         <th>Producto</th>
-        <td><input type="text" name="nombre_pro" class="input_editar_producto" value="{{pro_almacenes['nombre_pro'] }}"></td>
+        <td><input type="text" name="nombre_pro" class="input_editar_producto" value="{{almacenes.2}}"></td>
     </tr>
     <tr>
         <th>Area</th>
-        <td><input type="text" name="area_pro" class="input_editar_producto" value="{{pro_almacenes['area_pro'] }}"></td>
+        <td><input type="text" name="area_pro" class="input_editar_producto" value="{{almacenes.3}}"></td>
     </tr>
     <tr>
         <th>Precio</th>
-        <td><input type="text" name="precio_pro" class="input_editar_producto" value="{{pro_almacenes['precio_pro'] }}"></td>
+        <td><input type="text" name="precio_pro" class="input_editar_producto" value="{{almacenes.4}}"></td>
     </tr>
     <tr>
         <th>Cantidad</th>
-        <td><input type="text" name="cantidad_pro" class="input_editar_producto" value="{{pro_almacenes['cantidad_pro'] }}"></td>
+        <td><input type="text" name="cantidad_pro" class="input_editar_producto" value="{{almacenes.5}}"></td>
     </tr>
     
 </table>
-</form>
 <h1></h1>
 <input type="submit" class="input_guardar_pro" value="Guardar">
+</form>
+

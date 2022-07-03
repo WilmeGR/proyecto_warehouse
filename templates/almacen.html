@@ -10,10 +10,11 @@
 <body>
     <div class="formato">
     <h1 class="texto_almacen">Consulta Almacen</h1>
-    <form method="post">
+    <form method="post" action="/almacen">
         <input type="text" name="text_buscar" class="buscar_txt" placeholder= "Escribe el producto">
-        <button type="submit" class="btn_buscar" name="btn_buscar">BUSCAR</button>
+        <button type="submit" class="btn_buscar" name="btn_buscar">BUSCAR</button> 
     </form>
+<a href="/add_pro"><button type="submit" class="btn_añadir_pro" name="btn_buscar"><i class="fa fa-plus-circle"></i></button></a>
     <table class="tabla_almacen">
         <tr>
             <th>Codigo</th>
@@ -21,17 +22,16 @@
             <th>Area</th>
             <th>Precio</th>
             <th>Cantidad</th>
-            <th>Cantidad</th>
+            <th class="prueba">Opciones</th>
         </tr>
-        {% for row in pro_almacenes %}
+        {% for almacen in pro_almacenes %}
         <tr>
-            <td>{{row ["codigo_pro"] }}</td>
-            <td>{{row ["nombre_pro"] }}</td>
-            <td>{{row ["area_pro"] }}</td>
-            <td>{{row ["precio_pro"] }}</td>
-            <td>{{row ["cantidad_pro"] }}</td>
-        
-            <td><input type="submit"  value="Delete" class="btn_delete_almacen"> <a href="/editar_producto/{{row ['codigo_pro']}}"> <input type="submit" value="Editar" class="btn_update_almacen"></a> </td>
+            <td> {{almacen.1}}</td>
+            <td>{{ almacen.2 }}</td>
+            <td>{{almacen.3}}</td>
+            <td >{{almacen.4}}</td>
+            <td >{{almacen.5}}</td>
+            <td><a href="/delete/{{almacen.0}}"><input type="submit"  value="Delete" class="btn_delete_almacen"></a>  <a href="/editar_producto/{{almacen.0}}"> <input type="submit" value="Editar" class="btn_update_almacen"></a></td>
         </tr>
         {% endfor %}
     </table>

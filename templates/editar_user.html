@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+<h1>Editar Producto</h1>
+<form method="post" action="/update_user_done/{{usuario.0}}">
+<table class="tabla_editar_producto">
+    <tr>
+        <th>Usuario</th>
+        <td><input type="text" name="codigo_user" class="input_editar_usuario" value="{{usuario.1}}"></td>
+    </tr>
+    <tr>
+        <th>Nombre</th>
+        <td><input type="text" name="nombre_user" class="input_editar_usuario" value="{{usuario.2}}"></td>
+    </tr>
+    <tr>
+        <th>Apellido</th>
+        <td><input type="text" name="apellido_user" class="input_editar_usuario" value="{{usuario.3}}"></td>
+    </tr>
+    <tr>
+        <th>Contraseña</th>
+        <td><input type="text" name="clave_user" class="input_editar_usuario" value="{{usuario.4}}"></td>
+    </tr>
+    <tr>
+        <th>Correo</th>
+        <td><input type="text" name="correo_user" class="input_editar_usuario" value="{{usuario.5}}"></td>
+    </tr>
+</table>
+<h1></h1>
+<input type="submit" class="input_guardar_pro" value="Guardar">
+</form>

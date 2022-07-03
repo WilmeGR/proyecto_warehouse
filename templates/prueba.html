@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<tbody>
+<table class="tabla_almacen">
+    <tr>
+        <th>Codigo</th>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th class="prueba">Opciones</th>
+    </tr>
+    {% for almacen in pro_almacenes %}
+    <tr>
+        <td> {{almacen.0}}</td>
+        <td>{{ almacen.2 }}</td>
+        <td>{{almacen.3}}</td>
+        <td >{{almacen.1}}</td>
+        <td><input type="submit"  value="Delete" class="btn_delete_almacen"> <a href="/editar/{{['codigo_pro']}}"> <input type="submit" value="Editar" class="btn_update_almacen"></a></td>
+    </tr>
+    {% endfor %}
+</table>
+</tbody>
